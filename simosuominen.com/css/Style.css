@@ -1,4 +1,17 @@
-﻿body
-{
-    background-color:darkorchid;
+﻿body {
+    background-color: #294F6D;
+}
+.container {
+    background-color: #496D89;
+}
+.jumbotron {
+    background-color: #718EA4;
+}
+.thumbnail {
+    background-color: #718EA4;
+    border-color: #042037;
+}
+.well {
+    background-color: #718EA4;
+    border-color: #042037;
 }
