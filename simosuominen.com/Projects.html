@@ -2,27 +2,33 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link REL="StyleSheet" TYPE="text/css" HREF="css/Style.css">
+    <script type='text/javascript' src=".\JS\submit.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <title>Projects</title>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link REL="StyleSheet" TYPE="text/css" HREF="css\Style.css">
+    <meta name="description" content="Simo Suominen, Projects">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Simo Suominen">
+    <link rel="icon" href="C:\Users\simpp\Documents\Visual Studio 2017\Projects\simosuominen.com\Images\favicon.ico">
+    <title>Projects</title>
 </head>
-<body>
+<body onload="testFunction();" onscroll="scrollFunction();">
     <nav class="navbar navbar-default">
-        <div class="container-fluid">
+        <div class="container-fluid" style="background-color:#CFDDE9;">
             <div class="navbar-header">
-                <a class="navbar-brand" href="index.html">Simo Suominen</a>
+                <a class="navbar-brand" style="background-color:#CFDDE9;" href="index.html">Simo Suominen</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="Gallery.html">Gallery</a></li>
-                <li><a href="Projects.html">Projects</a></li>
-                <li><a href="Skills.html">Skills</a></li>
-                <li><a href="Contact.html">Contact</a></li>
-                <li><a href="Extra.html">Bonus</a></li>
+                <li><a href="index.html" style="background-color:#CFDDE9;">Home</a></li>
+                <li><a href="Gallery.html" style="background-color:#CFDDE9;">Gallery</a></li>
+                <li class="active"><a href="Projects.html">Projects</a></li>
+                <li><a href="Skills.html" style="background-color:#CFDDE9;">Skills</a></li>
+                <li><a href="Contact.html" style="background-color:#CFDDE9;">Contact</a></li>
+                <li><a href="Extra.html" style="background-color:#CFDDE9;">Bonus</a></li>
             </ul>
         </div>
     </nav>
@@ -33,8 +39,79 @@
         </div>
     </div>
     <div class="container well">
-        <h1>Here are some of my projects</h1>
-        <p>These are my projects</p>
-    </div>  
+        <h1>Projects</h1>     
+        <p>This page is for displaying projects and messing around with annoying Javascript alerts and effects.<br /></p>
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                            <strong>The time I wrestled a bear</strong>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        I wrestled a bear once. It was a tough match but in the end the bear had to tap out and I was declared a winner. Mouse over the image to make it bigger! <br />
+                        <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src=".\Images\bear.jpeg" alt="Bear" width="256" height="128">
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                            <strong>The time I flew to the sun</strong> 
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        I flew to the sun once. It was at night, since the sun is quite hot in daytime.
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                            <strong>The time I saved the world</strong>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        You probably didn't hear about it, it never got in to the news.
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                            <strong>The time I used javascript on scroll event (click and scroll)</strong> 
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non malesuada ante. Sed ac eros faucibus, porta lacus eget, venenatis libero. Nulla sed leo porttitor, tempus risus a, gravida quam. Nunc vel lectus maximus ex dictum convallis. Aenean vel pretium augue, vitae sodales nulla. Nunc fermentum sem eget auctor malesuada. Fusce ut suscipit quam. Integer elementum, magna vitae pulvinar iaculis, metus ipsum interdum eros, ut scelerisque ex nibh sit amet ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dictum auctor turpis, eu fermentum mauris maximus et. Vivamus eleifend sagittis pulvinar. Fusce vel pretium arcu.
+
+                        In sed semper felis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi ut lorem malesuada, pharetra ex quis, viverra leo. Aliquam consectetur ligula at nunc sodales, dapibus posuere nunc suscipit. Curabitur vitae malesuada purus. Fusce at lacus quis quam sagittis hendrerit non nec lorem.
+
+                        Mauris euismod nisl eget urna semper cursus. Fusce rutrum, dui vel accumsan accumsan, tellus libero semper orci, ut dictum purus libero vel eros. Pellentesque a elit non nisl placerat placerat. Maecenas molestie leo id purus imperdiet, vitae ullamcorper leo malesuada. Aliquam porttitor nec risus non gravida. Sed molestie vulputate feugiat. Nullam ultricies tellus et risus aliquet tempus. Duis condimentum mi non lacus viverra blandit. Vivamus est justo, tempus at tincidunt eget, ultrices in ipsum.
+
+                        Donec finibus malesuada sem, in imperdiet neque scelerisque non. Donec accumsan enim vitae justo congue scelerisque. Nunc turpis sem, iaculis ac nibh in, laoreet semper nisl. Aliquam erat volutpat. Maecenas vitae lorem vulputate, ultrices quam eget, mattis sem. Suspendisse nec fermentum mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut tincidunt dictum tortor, id rutrum turpis interdum sed. Aenean vel quam porttitor, pellentesque odio vel, bibendum tellus. In hac habitasse platea dictumst. In et sollicitudin enim.
+
+                        Nulla in dolor et elit ultrices lacinia a in nisi. Vivamus finibus, lacus sed condimentum dignissim, lorem nibh efficitur risus, vel laoreet odio odio nec nunc. Donec at tortor et eros pulvinar interdum id vitae mi. Fusce blandit, augue in sodales aliquet, ex tortor sagittis urna, vel tempor lorem nisi sit amet turpis. Proin placerat, nibh vitae interdum convallis, lectus libero congue tellus, nec ultricies orci quam a nibh. Curabitur nec imperdiet turpis. Praesent quis nisl sed arcu mollis sagittis. Praesent laoreet, tortor eu varius convallis, ipsum leo pulvinar est, sit amet fermentum nunc eros quis velit.
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <footer class="footer">
+            <div class="container" style="background-color:#CFDDE9;">
+            </div>
+        </footer>
 </body>
 </html>

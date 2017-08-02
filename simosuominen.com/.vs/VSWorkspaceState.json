@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\css"
+    "\\css",
+    "\\files",
+    "\\JS"
   ],
-  "SelectedNode": "\\index.html",
+  "SelectedNode": "\\JS\\submit.js",
   "PreviewInSolutionExplorer": false
 }

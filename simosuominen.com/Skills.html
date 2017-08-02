@@ -2,27 +2,34 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <title>Skills</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link REL="StyleSheet" TYPE="text/css" HREF="css/Style.css">
+    <script type='text/javascript' src=".\JS\submit.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Simo Suominen, Skills">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Simo Suominen">
+    <link rel="icon" href="C:\Users\simpp\Documents\Visual Studio 2017\Projects\simosuominen.com\Images\favicon.ico">
+    <title>Skills</title>
+
 </head>
 <body>
     <nav class="navbar navbar-default">
-        <div class="container-fluid">
+        <div class="container-fluid" style="background-color:#CFDDE9;">
             <div class="navbar-header">
-                <a class="navbar-brand" href="index.html">Simo Suominen</a>
+                <a class="navbar-brand" style="background-color:#CFDDE9;" href="index.html">Simo Suominen</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="Gallery.html">Gallery</a></li>
-                <li><a href="Projects.html">Projects</a></li>
-                <li><a href="Skills.html">Skills</a></li>
-                <li><a href="Contact.html">Contact</a></li>
-                <li><a href="Extra.html">Bonus</a></li>
+                <li><a href="index.html" style="background-color:#CFDDE9;">Home</a></li>
+                <li><a href="Gallery.html" style="background-color:#CFDDE9;">Gallery</a></li>
+                <li><a href="Projects.html" style="background-color:#CFDDE9;">Projects</a></li>
+                <li class="active"><a href="Skills.html">Skills</a></li>
+                <li><a href="Contact.html" style="background-color:#CFDDE9;">Contact</a></li>
+                <li><a href="Extra.html" style="background-color:#CFDDE9;">Bonus</a></li>
             </ul>
         </div>
     </nav>
@@ -33,8 +40,71 @@
         </div>
     </div>
     <div class="container well">
-        <h1>Here are some of my skills</h1>
-        <p>These are my skills</p>
-    </div>   
+        <h1>Skills</h1>
+        <p>This page can be used to showcase site owner skills. Javascript is used to allow adding new skills to the list. User CV can be added for download.</p>
+        <div class="btn-group">
+           <a href="./files/CV_Suominen.docx" type="button" class="btn btn-primary">.docx</a>
+           <a href="./files/CV_Suominen.pdf" type="button" class="btn btn-primary">.pdf</a> 
+        </div>
+            <p><br /></p>
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" id="newskillbutton" type="button" onclick="addRemoveSkill();">Add skill</button>
+                    </span>
+                    <input id="newskill" type="text" class="form-control" placeholder="Skill name">
+                </div>
+            </div>
+        <p><br /><br /></p>
+    </div>
+    <div class="container">
+        <div class="span3 well">
+            <center>
+                <a href="#aboutModal" data-toggle="modal" data-target="#myModal"><img src="./images/userpic.png" name="aboutme" width="140" height="140" class="img-circle"></a>
+                <h3>Simo Suominen</h3>
+                <em>Click the picture for more information and added skills</em>
+            </center>
+        </div>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                        <h4 class="modal-title" id="myModalLabel">About me</h4>
+                    </div>
+                    <div class="modal-body">
+                        <center>
+                            <img src="./images/userpic.png" name="aboutme" width="140" height="140" border="0" class="img-circle"></a>
+                            <h3 class="media-heading">Simo Suominen  <small>Helsinki, Finland</small></h3>
+                            <span><strong>Skills: </strong></span>
+                            <span class="label label-warning" id="skill1">HTML5/CSS</span>
+                            <span class="label label-info" id="skill2">Adobe CS 5.5</span>
+                            <span class="label label-success" id="skill3">Windows XP, Vista, 7</span>
+                            <span class="label label-warning" id="skill4">HTML5/CSS</span>
+                            <span class="label label-info" id="skill5">Adobe CS 5.5</span>
+                            <span class="label label-success" id="skill6">Windows XP, Vista, 7</span>
+                        </center>
+                        <hr>
+                        <center>
+                            <p class="text-left">
+                                <strong>Bio: </strong><br>
+                                Currently studying in Haaga Helia, soon looking for work.
+                            </p>
+                            <br>
+                        </center>
+                    </div>
+                    <div class="modal-footer">
+                        <center>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">That's all I want to know</button>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container" style="background-color:#CFDDE9;">
+        </div>
+    </footer>
 </body>
 </html>
