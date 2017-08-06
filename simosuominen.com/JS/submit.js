@@ -64,22 +64,6 @@ function normalImg(x) {
 function scrollFunction() {
     alert("You've been scrolling around!");
 }
-function isNumberKey(evt) {
-    var charCode = (evt.which) ? evt.which : evt.keyCode;
-    if (charCode != 46 && charCode > 31
-        && (charCode < 48 || charCode > 57))
-        return false;
-    return true;
-}
-
-
-function isNumericKey(evt) {
-    var charCode = (evt.which) ? evt.which : evt.keyCode;
-    if (charCode != 46 && charCode > 31
-        && (charCode < 48 || charCode > 57))
-        return true;
-    return false;
-}
 function addRemoveSkill() {
     //A function to add a skill to skill list. Works only once per page reload, since it messes up the skill IDs.
     var new6 = document.getElementById("skill5").textContent;
